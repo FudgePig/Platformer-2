@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Author: [ (Serrato, Denise), (Carey, Madison),  ]
+ * Author: [ (Serrato, Denise), (Carey, Madison), (Austria, Makaylee) ]
  * Date Created: [10/29/2024]
  * Last Updated: [10/29/2024]
  * [This will handle the player movement.]

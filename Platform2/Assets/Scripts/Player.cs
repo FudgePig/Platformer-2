@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Author: [ (Serrato, Denise), (Carey, Madison),  ]
+ * Author: [ (Serrato, Denise), (Carey, Madison), (Austria, Makaylee) ]
  * Date Created: [10/29/2024]
  * Last Updated: [10/29/2024]
  * [This will handle the player movement.]
@@ -32,7 +32,23 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
-    /// Player will move by adding force when either the A, D, left arrow, or right arrow are pressed.
+    /// Player will jump by adding force when the W key is pressed.
+    /// </summary>
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
+            {
+                rigidbody.AddForce(Vector3.up * jump, ForceMode.Impulse);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Player will move by adding force when either the keys.
     /// </summary>
     private void PlayerMoves()
     {
